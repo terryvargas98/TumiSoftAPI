@@ -39,7 +39,7 @@ Edita el archivo `.env` y coloca tus credenciales locales:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=tumisoft_api
+DB_DATABASE=sales
 DB_USERNAME=root
 DB_PASSWORD=
 ```
@@ -68,7 +68,7 @@ http://127.0.0.1:8000
 1. Asegúrate de tener **MySQL o MariaDB** corriendo (puedes usar XAMPP o Laragon).  
 2. Crea una base de datos vacía:
    ```sql
-   CREATE DATABASE tumisoft_api;
+   CREATE DATABASE sales;
    ```
 3. Verifica que tus credenciales en `.env` coincidan con tu entorno local.  
 4. Ejecuta migraciones y seeders:
