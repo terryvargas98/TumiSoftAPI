@@ -11,6 +11,9 @@ use App\Http\Requests\ProductUpdateRequest;
 use App\Models\Product;
 use Illuminate\Support\Facades\Log;
 use Exception;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Client\Request as ClientRequest;
+use Illuminate\Http\Request as HttpRequest;
 
 class ProductController extends Controller
 {
@@ -89,10 +92,17 @@ class ProductController extends Controller
         }
     }
 
-    public function topSold(): JsonResponse
+    public function topSold(HttpRequest $request): JsonResponse
     {
         try {
             $topProducts =  $this->service->topSold();
+
+            if (!empty($request['download'])) {
+                $topProducts['excel'] = "Simulación";
+            }
+            if (!empty($request['format']) && in_array(strtolower($request['format']), ['.xls', '.xlsx'])) {
+                $topProducts['format'] = $request['format'];
+            }
 
             return response()->json([
                 'error' => false,

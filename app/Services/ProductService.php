@@ -71,7 +71,7 @@ class ProductService
     }
     public function topSold(int $limit = 5)
     {
-        return DB::table('order_product')
+        DB::table('order_product')
             ->join('products', 'products.id', '=', 'order_product.product_id')
             ->select(
                 'products.id',
@@ -83,6 +83,8 @@ class ProductService
             ->orderByDesc('total_vendido')
             ->limit($limit)
             ->get();
+
+
     }
     
 }
