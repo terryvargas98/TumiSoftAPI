@@ -13,8 +13,8 @@ Proyecto de evaluación técnica desarrollado con **Laravel 9**, siguiendo buena
 
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone https://github.com/<TU_USUARIO>/<NOMBRE_DEL_REPO>.git
-cd <NOMBRE_DEL_REPO>
+git clone https://github.com/terryvargas98/TumiSoftAPI
+cd TumiSoftAPI
 ```
    
 ### 2️⃣ Instalar dependencias PHP
