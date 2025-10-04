@@ -1,0 +1,1638 @@
+{
+	"info": {
+		"_postman_id": "c3af7552-7f16-4adb-9e28-b4eb59dbf89d",
+		"name": "ApiTestTumisoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23357305"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Atun Gloria\",\r\n    \"price\": -1,\r\n    \"stock\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success 201 -Producto Creado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Atun Gloria\",\r\n    \"price\": 12,\r\n    \"stock\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:01:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Producto creado correctamente\",\n    \"data\": {\n        \"name\": \"Atun Gloria\",\n        \"price\": 12,\n        \"stock\": 3,\n        \"updated_at\": \"2025-10-04T12:01:11.000000Z\",\n        \"created_at\": \"2025-10-04T12:01:11.000000Z\",\n        \"id\": 30\n    }\n}"
+						},
+						{
+							"name": "Error 422 - Validación fallida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Atun Gloria\",\r\n    \"price\": -1,\r\n    \"stock\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:08:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Error de validación\",\n    \"errors\": {\n        \"price\": [\n            \"El precio no puede ser negativo.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products?min_price=200&max_price=1000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "min_price",
+									"value": "200"
+								},
+								{
+									"key": "max_price",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success-Listado Producto",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products?min_price=200&max_price=300",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "min_price",
+											"value": "200"
+										},
+										{
+											"key": "max_price",
+											"value": "300"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:13:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Lista de productos\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"quisquam\",\n            \"price\": \"269.63\",\n            \"stock\": \"57.00\",\n            \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n            \"updated_at\": \"2025-10-04T10:18:30.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"tempore\",\n            \"price\": \"247.00\",\n            \"stock\": \"19.00\",\n            \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n            \"updated_at\": \"2025-10-04T10:18:30.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"harum\",\n            \"price\": \"297.91\",\n            \"stock\": \"88.00\",\n            \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n            \"updated_at\": \"2025-10-04T10:18:30.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"modi\",\n            \"price\": \"247.98\",\n            \"stock\": \"18.00\",\n            \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n            \"updated_at\": \"2025-10-04T10:18:30.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Patch Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": 1231\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success  200 - Producto editado",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Leche Gloria\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:09:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Producto actualizado correctamente\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Leche Gloria\",\n        \"price\": \"12.00\",\n        \"stock\": \"10.00\",\n        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n        \"updated_at\": \"2025-10-04T12:02:37.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Error 422 - Validación Fallida",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": 1231\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:15:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Error de validación\",\n    \"errors\": {\n        \"name\": [\n            \"El nombre debe ser un texto válido.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Put Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leche\",\r\n    \"price\": 12,\r\n    \"stock\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/1131",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1131"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success 200 - Producto editado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Leche\",\r\n    \"price\": 12,\r\n    \"stock\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:17:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Producto actualizado correctamente\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Leche\",\n        \"price\": 12,\n        \"stock\": 0,\n        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n        \"updated_at\": \"2025-10-04T12:17:45.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Error 404 - Recurso no encontrado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Leche\",\r\n    \"price\": 12,\r\n    \"stock\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/1131",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1131"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:18:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Recurso no encontrado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Error 404 - Recurso no encontrado",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/18",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"18"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:20:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Recurso no encontrado\"\n}"
+						},
+						{
+							"name": "Success 200 - Producto eliminado correctamente",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:20:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Producto eliminado correctamente\"\n}"
+						}
+					]
+				}
+			],
+			"description": "CRUD Productos"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": 3,\r\n  \"products\": [\r\n    { \"id\": 2, \"quantity\": 200000 },\r\n    { \"id\": 3, \"quantity\": 1 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success 201 - Pedido creado correctamente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": 3,\r\n  \"products\": [\r\n    { \"id\": 2, \"quantity\": 20 },\r\n    { \"id\": 3, \"quantity\": 1 }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:22:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Pedido creado correctamente\",\n    \"data\": {\n        \"user_id\": 3,\n        \"total\": 1876.59,\n        \"state\": \"pending\",\n        \"updated_at\": \"2025-10-04T12:22:30.000000Z\",\n        \"created_at\": \"2025-10-04T12:22:30.000000Z\",\n        \"id\": 22,\n        \"products\": [\n            {\n                \"id\": 2,\n                \"name\": \"eius\",\n                \"price\": \"70.99\",\n                \"stock\": \"8.00\",\n                \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                \"updated_at\": \"2025-10-04T12:22:30.000000Z\",\n                \"pivot\": {\n                    \"order_id\": 22,\n                    \"product_id\": 2,\n                    \"quantity\": 20,\n                    \"subtotal\": \"1419.80\",\n                    \"created_at\": \"2025-10-04T12:22:30.000000Z\",\n                    \"updated_at\": \"2025-10-04T12:22:30.000000Z\"\n                }\n            },\n            {\n                \"id\": 3,\n                \"name\": \"vitae\",\n                \"price\": \"456.79\",\n                \"stock\": \"26.00\",\n                \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                \"updated_at\": \"2025-10-04T12:22:30.000000Z\",\n                \"pivot\": {\n                    \"order_id\": 22,\n                    \"product_id\": 3,\n                    \"quantity\": 1,\n                    \"subtotal\": \"456.79\",\n                    \"created_at\": \"2025-10-04T12:22:30.000000Z\",\n                    \"updated_at\": \"2025-10-04T12:22:30.000000Z\"\n                }\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Error 400 - Stock Insuficiente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": 3,\r\n  \"products\": [\r\n    { \"id\": 2, \"quantity\": 200000 },\r\n    { \"id\": 3, \"quantity\": 1 }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:23:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"No se pudo crear el pedido: Stock insuficiente para el producto eius\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Top Sold",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/top-sold",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"top-sold"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success 200 - Top 5 productos más vendidos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/top-sold",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"top-sold"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:27:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Top 5 productos más vendidos\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"eius\",\n            \"price\": \"70.99\",\n            \"total_vendido\": \"34\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"iste\",\n            \"price\": \"59.61\",\n            \"total_vendido\": \"29\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"vitae\",\n            \"price\": \"456.79\",\n            \"total_vendido\": \"26\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"modi\",\n            \"price\": \"247.98\",\n            \"total_vendido\": \"25\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"cum\",\n            \"price\": \"489.66\",\n            \"total_vendido\": \"24\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Orders per user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|vMRzIyFfAYWfQi5xtM5IkRab6pSaw37orRf6Qixja12b4b1b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/11/orders?",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"11",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success - Pedidos del usuario con total acumulado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/11/orders?",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"11",
+										"orders"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:28:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Pedidos del usuario con total acumulado\",\n    \"data\": {\n        \"total_acumulado\": 10634.24,\n        \"pedidos\": [\n            {\n                \"id\": 1,\n                \"user_id\": 11,\n                \"total\": \"10634.24\",\n                \"state\": \"sold\",\n                \"created_at\": \"2025-10-03T10:18:30.000000Z\",\n                \"updated_at\": \"2025-10-04T10:18:31.000000Z\",\n                \"products\": [\n                    {\n                        \"id\": 12,\n                        \"name\": \"quasi\",\n                        \"price\": \"448.01\",\n                        \"stock\": \"81.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 12,\n                            \"quantity\": 3,\n                            \"subtotal\": \"1344.03\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 8,\n                        \"name\": \"esse\",\n                        \"price\": \"93.57\",\n                        \"stock\": \"27.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 8,\n                            \"quantity\": 1,\n                            \"subtotal\": \"93.57\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 17,\n                        \"name\": \"nam\",\n                        \"price\": \"475.50\",\n                        \"stock\": \"96.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 17,\n                            \"quantity\": 3,\n                            \"subtotal\": \"1426.50\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"vitae\",\n                        \"price\": \"456.79\",\n                        \"stock\": \"26.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T12:22:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 3,\n                            \"quantity\": 3,\n                            \"subtotal\": \"1370.37\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 16,\n                        \"name\": \"voluptatem\",\n                        \"price\": \"72.63\",\n                        \"stock\": \"33.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 16,\n                            \"quantity\": 2,\n                            \"subtotal\": \"145.26\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 9,\n                        \"name\": \"harum\",\n                        \"price\": \"297.91\",\n                        \"stock\": \"88.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 9,\n                            \"quantity\": 3,\n                            \"subtotal\": \"893.73\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 15,\n                        \"name\": \"dolore\",\n                        \"price\": \"166.98\",\n                        \"stock\": \"92.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 15,\n                            \"quantity\": 1,\n                            \"subtotal\": \"166.98\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"cum\",\n                        \"price\": \"489.66\",\n                        \"stock\": \"21.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 20,\n                            \"quantity\": 2,\n                            \"subtotal\": \"979.32\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"tempore\",\n                        \"price\": \"247.00\",\n                        \"stock\": \"19.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 7,\n                            \"quantity\": 1,\n                            \"subtotal\": \"247.00\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"quisquam\",\n                        \"price\": \"269.63\",\n                        \"stock\": \"57.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 4,\n                            \"quantity\": 2,\n                            \"subtotal\": \"539.26\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"eius\",\n                        \"price\": \"70.99\",\n                        \"stock\": \"8.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T12:22:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 2,\n                            \"quantity\": 1,\n                            \"subtotal\": \"70.99\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 11,\n                        \"name\": \"modi\",\n                        \"price\": \"247.98\",\n                        \"stock\": \"18.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 11,\n                            \"quantity\": 3,\n                            \"subtotal\": \"743.94\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"iste\",\n                        \"price\": \"59.61\",\n                        \"stock\": \"51.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 5,\n                            \"quantity\": 3,\n                            \"subtotal\": \"178.83\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 6,\n                        \"name\": \"at\",\n                        \"price\": \"109.89\",\n                        \"stock\": \"55.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 6,\n                            \"quantity\": 1,\n                            \"subtotal\": \"109.89\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 14,\n                        \"name\": \"qui\",\n                        \"price\": \"412.76\",\n                        \"stock\": \"89.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 14,\n                            \"quantity\": 2,\n                            \"subtotal\": \"825.52\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 13,\n                        \"name\": \"exercitationem\",\n                        \"price\": \"470.55\",\n                        \"stock\": \"81.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 13,\n                            \"quantity\": 1,\n                            \"subtotal\": \"470.55\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 10,\n                        \"name\": \"cumque\",\n                        \"price\": \"99.65\",\n                        \"stock\": \"25.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 10,\n                            \"quantity\": 2,\n                            \"subtotal\": \"199.30\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 19,\n                        \"name\": \"ut\",\n                        \"price\": \"336.23\",\n                        \"stock\": \"17.00\",\n                        \"created_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"updated_at\": \"2025-10-04T10:18:30.000000Z\",\n                        \"pivot\": {\n                            \"order_id\": 1,\n                            \"product_id\": 19,\n                            \"quantity\": 2,\n                            \"subtotal\": \"672.46\",\n                            \"created_at\": \"2025-10-04T10:18:31.000000Z\",\n                            \"updated_at\": \"2025-10-04T10:18:31.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"kdamore@example.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success 200 - Inicio de sesión correcto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"kdamore@example.com\",\r\n    \"password\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:31:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Inicio de sesión correcto\",\n    \"token\": \"4|t4b7hZk7KCU6De6GMpHpH5a7F2NlSqw1Mu2fli2i5419ff52\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Mr. Brain Streich IV\",\n        \"email\": \"kdamore@example.com\",\n        \"email_verified_at\": \"2025-10-04T10:18:29.000000Z\",\n        \"created_at\": \"2025-10-04T10:18:29.000000Z\",\n        \"updated_at\": \"2025-10-04T10:18:29.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Error 401 - Credenciales invalidas",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"kdamore@exa2mple.com\",\r\n    \"password\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 12:32:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Credenciales inválidas\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
